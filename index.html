@@ -4,12 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cookie clicker</title>
-</head>
-<body>
-    <h1>Allow Pop-ups to start the game in a new window</h1>
+    <style>
+        * {
+            text-align: center;
+            padding: 0px;
+            margin: 0px;
+            transition: all 0.1s ease-in-out;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 2rem;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        button {
+            padding: 0.5rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            border: none;
+            border-radius: 0.3rem;
+            background-color: white;
+            color: black;
+            border: 0.15rem solid black;
+            box-sizing: content-box;
+        }
+
+        button:hover {
+            background-color: #007bff;
+            color: white;
+            outline: rgba(0, 0, 0, 0);
+            border: 0.15rem solid #007bff;
+        }
+    </style>
     <script>
+        const refresh = () => {window.location.href = window.location.href}
         const e = window.open(window.location.href);
         window.location.href = window.location.href;
     </script>
+</head>
+<body>
+    <h1>Allow Pop-ups to start the game in a new window</h1>
+    <p>refresh the page when finished</p>
+    <div>
+        <button onclick="refresh();">Refresh</button>
+    </div>
 </body>
 </html>
