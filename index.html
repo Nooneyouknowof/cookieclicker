@@ -41,9 +41,11 @@
         }
     </style>
     <script>
-        const refresh = () => {window.location.href = window.location.href}
+        const refresh = () => {window.location.href = window.location.href; localStorage.setItem("test", true);}
         const e = window.open(window.location.href);
-        window.location.href = window.location.href;
+        if (localStorage.test == 'true') {
+            window.location.href = window.location.href;
+        }
     </script>
 </head>
 <body>
